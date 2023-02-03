@@ -5,12 +5,11 @@
 ![Image](ScreenShot.png)
 
 
-
 # 食用方法
 
 ## 1. 打开Crawler.exe，输入文献ID
 
-文献ID可以从网址中获取，例如：https://kd.nsfc.gov.cn/finalDetails?id=12d6537fa6322f07fab7f8ab38bf9cf9，“id=”后的16进制码即为文献id。
+文献ID可以从网址中获取，例如：https://kd.nsfc.gov.cn/finalDetails?id=12d6537fa6322f07fab7f8ab38bf9cf9 ，“id=”后的16进制码即为文献id。
 
 ## 2. 文献信息核对
 
@@ -29,11 +28,9 @@ Crawler会自动查询文献ID，并向你展示查询的信息和总页数。
 继续输入ID可以继续抓取内容，你也可以输入“0”来结束并退出程序。
 
 
-
 # 文件保存路径
 
 ./Image/*文献名*
-
 
 
 # WARNNING
