@@ -1,6 +1,6 @@
 # Crawler
 
-用于爬取用于爬取kd.nsfc.gov.cn资料的爬虫
+用于爬取kd.nsfc.gov.cn资料的爬虫
 
 ![Image](ScreenShot.png)
 
@@ -33,6 +33,6 @@ Crawler会自动查询文献ID，并向你展示查询的信息和总页数。
 ./Image/*文献名*
 
 
-# WARNNING
+# WARNING
 
 程序目前没有输入内容合法性的检测，如果输入数值后闪退，请检查数数值是否正确。
