@@ -19,20 +19,16 @@ if __name__ == '__main__':
             break
         data['id'] = paper_id
         print("正在获取文献信息...\t预计耗时15秒")
-        for t in range(7):                      #使用二分法搜索
+        while minn < maxn:                      #使用二分法搜索
             ave = int((minn + maxn) / 2)
             data['index'] = ave
             response = requests.post(url=getImageUrl, headers=headers, data=data)
             json_ids = response.json()
             judge = requests.get(url='https://kd.nsfc.gov.cn' + json_ids['data']['url'])
             if judge.text[0] != '<':
-                #flag = True
-                minn = ave
+                minn = ave + 1
             else:
-                #flag = False
                 maxn = ave
-            #if flag:
-            #else:
         response.close()
         judge.close()
         info = requests.get(url=getInfoUrl+paper_id,headers=headers)
