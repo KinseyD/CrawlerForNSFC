@@ -1,6 +1,6 @@
 # Crawler
 
-用于爬取kd.nsfc.gov.cn资料的爬虫
+用于爬取kd.nsfc.gov.cn结题报告的爬虫
 
 ![Image](ScreenShot.png)
 
