@@ -7,8 +7,22 @@ data = {    #请求数据
     'id': '',
     'index': 0
 }
-headers = {  # 请求头,ua
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.42'
+headers = { 
+    'Accept': 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'Connection': 'keep-alive',
+    'Dnt': '1',
+    'Host': 'kd.nsfc.gov.cn',
+    'Referer': '',
+    'Sec-Ch-Ua': '"Microsoft Edge";v="117", "Not;A=Brand";v="8", "Chromium";v="117',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'image',
+    'Sec-Fetch-Mode': 'no-cors',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Gpc': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.9'
 }
 
 
@@ -31,7 +45,7 @@ while True:
         data['index'] = ave
         response = requests.post(url = getImageUrl, headers = headers, data = data)
         json_ids = response.json()
-        judge = requests.get(url = 'https://kd.nsfc.gov.cn' + json_ids['data']['url'])
+        judge = requests.get(url = 'https://kd.nsfc.gov.cn' + json_ids['data']['url'], headers = headers)
         if judge.ok:
             minn = ave
         else:
